@@ -3,7 +3,7 @@ import Link from 'next/link';
 function Header() {
   return (
     <div>
-      <div className='flex h-20 max-w-5xl w-full mx-auto flex-row items-center justify-around border-b border-stone-300 bg-white'>
+      <header className='flex h-20 max-w-5xl w-full mx-auto flex-row items-center justify-around border-b border-stone-300 bg-white'>
         <div className='text-2xl font-thin '>
           <Link href='/'>Guitar Shop</Link>
         </div>
@@ -11,10 +11,10 @@ function Header() {
           <Link href='/products/electric'>Electric Guitars</Link>
           <Link href='/products/acoustic'>Acoustic Guitars</Link>
           <Link href='/products/strings'>Strings</Link>
-          <Link href='account'>Account</Link>
-          <Link href='cart'>Cart</Link>
+          <Link href='/account'>Account</Link>
+          <Link href='/cart'>Cart</Link>
         </div>
-      </div>
+      </header>
     </div>
   );
 }
