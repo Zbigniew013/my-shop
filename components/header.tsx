@@ -7,9 +7,9 @@ function Header() {
         <Link href='/'>Guitar Shop</Link>
       </div>
       <div className='items-center space-x-8 font-light'>
-        <Link href='/products/electric'>Electric Guitars</Link>
-        <Link href='/products/acoustic'>Acoustic Guitars</Link>
-        <Link href='/products/strings'>Strings</Link>
+        <Link href='/prod_electric'>Electric Guitars</Link>
+        <Link href='/prod_acoustic'>Acoustic Guitars</Link>
+        <Link href='/prod_strings'>Strings</Link>
         <Link href='/account'>Account</Link>
         <Link href='/cart'>Cart</Link>
       </div>
