@@ -13,6 +13,7 @@ function ProductsPage({
               <Product
                 data={{
                   id: product.id,
+                  title: product.title,
                   imageUrl: product.image,
                   imageAlt: product.title,
                   description: product.description,
