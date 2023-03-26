@@ -1,5 +1,5 @@
 import { InferGetStaticPropsType } from 'next';
-import { Product } from './product';
+// import Product from './product';
 
 function ProductsPage({
   data,
@@ -10,7 +10,22 @@ function ProductsPage({
         {data.map(product => {
           return (
             <li key={product.id}>
-              <Product
+              <div>
+                <picture>
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className='h-80 w-60 object-contain'
+                  />
+                </picture>
+                <h2 className='font-bold text-2xl px-4 '>{product.title}</h2>
+                <p className='w-60 font-light p-4'>{product.description}</p>
+                <p className='text-amber-500 font-bold px-4'>
+                  {product.rating.rate}
+                </p>
+                {/* <Rating rating={product.rating} /> */}
+              </div>
+              {/* <Product
                 data={{
                   id: product.id,
                   title: product.title,
@@ -18,8 +33,8 @@ function ProductsPage({
                   imageAlt: product.title,
                   description: product.description,
                   rating: product.rating.rate,
-                }}
-              />
+                }} */}
+              {/* /> */}
             </li>
           );
         })}

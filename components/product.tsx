@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const DATA = {
   id: 1,
   title: 'Ibanez',
@@ -27,14 +25,16 @@ interface ProductProps {
     rating: number;
   };
 }
-export function Product({ data }: ProductProps) {
+export default function Product({ data }: ProductProps) {
   return (
     <div>
-      <img
-        src={data.imageUrl}
-        alt={data.imageAlt}
-        className='h-80 w-60 object-contain'
-      />
+      <picture>
+        <img
+          src={data.imageUrl}
+          alt={data.imageAlt}
+          className='h-80 w-60 object-contain responsive'
+        />
+      </picture>
       <h2 className='font-bold text-2xl px-4 '>{data.title}</h2>
       <p className='w-60 font-light p-4'>{data.description}</p>
       <Rating rating={data.rating} />
